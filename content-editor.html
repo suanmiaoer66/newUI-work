@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>作品集文案管理器</title>
+  <link rel="stylesheet" href="content-editor.css" />
+</head>
+<body>
+  <header class="editor-header">
+    <div>
+      <p class="eyebrow">PORTFOLIO CONTENT</p>
+      <h1>作品集文案管理器</h1>
+      <p class="lede">集中修改网站中的可见文案，每个字段都标注了它出现的页面场景。</p>
+    </div>
+    <div class="header-actions">
+      <a class="button button-ghost" href="portfolio-agent.html">返回作品集</a>
+      <button class="button button-ghost" id="reset-button" type="button">撤销本次修改</button>
+      <button class="button button-primary" id="save-button" type="button">保存到本地</button>
+    </div>
+  </header>
+
+  <main class="editor-main">
+    <section class="notice-card">
+      <strong>修改流程</strong>
+      <span>编辑字段 → 点击“保存到本地” → 选择项目里的 <code>portfolio-content.js</code> 覆盖保存 → 刷新作品集预览。</span>
+      <button class="text-button" id="download-button" type="button">只下载副本</button>
+    </section>
+
+    <section class="editor-section">
+      <div class="section-heading">
+        <div>
+          <p class="section-kicker">SITE</p>
+          <h2>个人信息与首页</h2>
+        </div>
+        <p>主页顶部、首页介绍和联系方式使用的文案。</p>
+      </div>
+      <div class="field-grid" id="site-fields"></div>
+    </section>
+
+    <section class="editor-section">
+      <div class="section-heading">
+        <div>
+          <p class="section-kicker">PROJECTS</p>
+          <h2>项目文案</h2>
+        </div>
+        <p>每个项目分别对应卡片、悬停状态和详情弹窗。</p>
+      </div>
+      <div class="project-list" id="project-fields"></div>
+    </section>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="portfolio-content.js"></script>
+  <script src="content-editor.js"></script>
+</body>
+</html>
